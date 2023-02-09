@@ -1,19 +1,19 @@
-import propes from "react";
-function Chart(propes)
+import Bar from "./ChartBars";
+import Chartdata from "./data.json";
+function Chart()
 {
     return(
         <div className="container">
             <div className="chead">
                 <h2>Spending - Last 7 days</h2>
             </div>
+            <br />
             <div className="bars">
-                <div className="bar-info">
-                    {propes.amount}
-                    <div className="bar"></div>
-                    {propes.name}
-                </div>
+            {Chartdata.map((item)=>{return <Bar day={item.day} amount={item.amount}/>})}
             </div>
+            <br />
             <hr />
+            <br />
             <div className="cfooter">
                 <h4>Total this month</h4>
                 <div className="ProfitLoss">

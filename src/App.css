@@ -17,6 +17,7 @@
 }
 body
 {
+  padding: 30% 0;
   display: grid;
   place-items:center;
   font-size: 18px;
@@ -41,8 +42,110 @@ body
 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .incDec
 {
   text-align: end;
+}
+.bars
+{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.bar
+{
+  text-align: center;
+  align-self: flex-end;
+}
+.bar:hover>.dollar
+{opacity: 1;}
+.dollar
+{
+  background-color: var(--Darkbrown);
+  color: var(--Verypaleorange);
+  padding: 5px 10px;
+  border-radius:5px;
+  opacity: 0;
+}
+.barHeight
+{
+  background-color: var(--Softred);
+  margin: 7px;
+  height: 150px;
+  border-radius: 5px;
+  align-items: flex-end;
+}
+.barHeight:hover
+{
+  cursor: pointer;
+  filter: opacity(80%);
+}
+.barHeight:active
+{
+  cursor: pointer;
+  background-color: var(--Cyan);
+}
+.day
+{
+  color: var(--Mediumbrown);
+}
+#mon
+{
+  height:calc(17.45*3px);
+}
+#tue
+{
+  height:calc(34.91*3px);
+}
+#wed
+{
+  height:calc(52.36*3px);
+}
+#thu
+{
+  height:calc(31.07*3px);
+}
+#fri
+{
+  height:calc(23.39*3px);
+}
+#sat
+{
+  height:calc(43.28*3px);
+}
+#sun
+{
+  height:calc(25.48*3px);
+}
+h1
+{
+  color: var(--Verypaleorange);
+}
+p
+{
+  color: var(--Cream);
+}
+h2
+{
+  color: var(--Darkbrown);
+  font-size: 35px;
+}
+.cfooter h2
+{
+  font-size: 50px;
+}
+h4
+{
+  color:var(--Mediumbrown)
+}
+.incDec h4
+{
+  font-weight: lighter;
+}
+@media (width>500px) {
+  body{
+    padding: 0;
+  }
 }
